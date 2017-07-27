@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css?family=Open+sans:400,700")
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700")
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
+/* Sass features */
+$primary-font: "Open+sans", sans-serif
+$special-font: "Josefin Sans", sans-serif
+$primary-color: rgb(38, 38, 38)
+$special-color: #2ecc71
+$white-color: #f2f2f2
+$navigation-color: #1a1a1a
+
+=transform($transforms)
+	-webkit-transform: $transforms
+	-moz-transform: $transforms
+	-ms-transform: $transforms
+	transform: $transforms
+
+/* Main Css */
+* 
+	box-sizing: border-box
+
+body 
+	font-family: $primary-font
+
+header 
+	background-color: $navigation-color
+
+.navigation 
+	text-align: center
+
+.container 
+	max-width: 1100px
+	margin: 0 auto
+	width: 100%
+
+.clearfix:after 
+	content: ""
+	visibility: hidden
+	display: block
+	height: 0
+	clear: both
+
+nav 
+	ul
+		margin: 0
+		padding: 0
+		float: none
+	
+		li
+			list-style-type: none
+			float: right
+			margin-top: 5px
+			background-color: #1a1a1a
+			text-align: center
+			padding: 10px
+			
+			&:hover
+				background-color: #333
+				cursor: pointer
+				border-radius: 15px
+				text-align: center
+
+			a 
+				text-decoration: none
+				padding: 13px 20px
+				text-transform: uppercase
+				color: $white-color
+				display: inline
+				text-align: center
+
+.logo
+	margin-top: 6px
+	float: left
+
+.jumbotron 
+	background-image: url("https://images.unsplash.com/photo-1493551511613-abc8320c265e?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=")
+	background-position: center
+	background-size: cover
+	height: 80vh
+	width: 100%
+	overflow: hidden
+	margin-top: 30px
+
+.slogan 
+	background-color: rgba($primary-color, 0.5)
+	color: $white-color
+	font-family: $special-font
+	width: 60%
+	height: 40%
+	margin-top: 200px
+	float: right
+	position: relative
+
+h1 
+	position: absolute
+	top: 15%
+	left: 10px
+	font-size: 58px
+
+h2
+	display: block
+	font-size: 38px
+	position: absolute
+	top: 55%
+	left: 10px
+
+.company-name 
+	font-weight: bold
+
+[class*="col-"]
+	float: left
+	min-height: 1px
+	padding: 10px
+
+.row,
+.row:before,
+.row:after
+	content: ""
+	display: table
+	clear: both
+
+.row
+	width: 100%
+
+.first
+	margin-top: 50px
+
+.icon
+	display: inline-block
+	text-align: center
+	height: 100px
+	width: 100px
+	background-color: $special-color
+	border-radius: 20px
+	margin: 0 auto
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+
+.icon .fa
+	font-size: 50px
+	padding: 25px 0
+	color: $white-color
+	text-align: center
+
+.puzzle
+	background-color: rgb(38, 38, 38)
+
+.key-words
+	display: inline-block
+	text-align: center
+	background-color: $white-color
+	text-transform: uppercase
+	color: rgb(38, 38, 38)
+	font-weight: bold
+	margin: 0 auto
+	margin-top: 20px
+	text-align: center
+	font-family: "Josefin Sans", sans-serif
+
+.description 
+	text-align: center
+	color: rgb(38, 38, 38)
+
+.title
+	font-family: "Josefin Sans", sans-serif
+	margin-top: 70px
+	text-transform: uppercase
+	color: rgb(38, 38, 38)
+	font-weight: 900
+	font-size: 38px
+	text-align: center
+	margin-bottom: 10px
+
+.text, 
+.title
+	color: $primary-color
+	text-align: center
+
+.gallery
+	padding: 0
+	margin-top: 30px
+	margin-bottom: 10px
+
+.gallery img
+	display: block
+	width: 100%
+	height: 200px
+	object-fit: cover
+	margin: 0
+	padding: 0
+
+.gallery 
+	.col-m-2
+		position: relative
+		padding: 0
+		
+	&:hover .layer 
+		visibility: visible
+		padding: 0
+
+.layer
+	background-color: rgba(0,0,0, 0.5)
+	width: 100%
+	height: 100%
+	visibility: hidden
+	position: absolute
+	top: 0px
+	text-align: center
+
+.layer 
+	i.fa
+		display: inline-block
+		font-size: 40px
+		color: black
+		margin: 0px auto
+		margin-top: 70px
+		padding: 5px
+
+	&:hover
+		visibility: visible
+
+.photos
+	text-align: center
+
+.photo
+	display: inline-block
+	margin: 0 auto
+	margin-top: 30px
+	margin-bottom: 20px
+	width: 150px
+	height: 150px
+	border-radius: 150px
+	background-color: rgba(38, 38, 38, .5)
+
+.three
+	@extend .photo
+	border: 2px solid $special-color
+
+.members 
+	font-size: 12px
+	font-weight: bold
+	margin-bottom: 50px
+	text-align: center
+
+.picture
+	background-color: rgba($special-color, .6)
+	margin-top: 30px
+	padding-bottom: 50px
+
+.description 
+	margin-top: 20px
+
+.promo img
+	width: 100%
+
+.promo
+	margin-top: 38px
+
+.second-title 
+	font-size: 38px
+	font-family: $special-font
+	font-weight: 900
+	color: $white-color
+
+.second-text 
+	text-align: justify
+	color: $white-color
+	margin-top: 5px
+	padding: 10px
+
+.bold 
+	font-weight: 800
+	color: $white-color
+
+.numbers
+	margin: 75px auto
+
+.number
+	font-size: 38px
+	font-weight: 800
+	color: $special-color
+	
+.numb-descrpt
+	font-weight: bold
+	margin-top: 10px
+
+.number, .numb-descrpt
+	text-align: center
+
+.footer
+	color: $white-color
+	background-color: $navigation-color
+	text-align: justify
+	padding-bottom: 30px
+	z-index: 1
+
+	.col-m-4
+		position: relative
+		padding: 0
+		padding-right: 20px
+
+.line
+	height: 0.5px
+	width: calc(100% - 20px)
+	display: inline-block
+	background-color: $white-color
+	position: absolute
+	top: 37px
+	left: 0px
+	z-index: 2
+
+.big
+	text-transform: uppercase
+	font-size: 18px
+	font-weight: 600
+	margin-top: 30px
+	margin-bottom: 10px
+	z-index: 3
+	padding-right: 10px
+	background-color: $navigation-color
+	display: inline-block
+	position: relative
+
+.small
+	font-size: 15px
+
+.small .col-m-3,
+.small .col-m-9 
+	padding: 0
+
+.buttons
+	margin-top: 5px
+
+.icons	
+	display: inline-block
+	text-align: center
+	width: 40px
+	height: 40px
+	margin: 0 auto
+	border-radius: 10px
+	background-color: $special-color
+	font-size: 2px
+	color: $white-color
+	
+	&:hover
+		+transform(scale(1.1))
+		transition: ease-in-out .3s
+		color: $white-color
+
+	.fa
+		font-size: 25px
+		margin-top: 10px
+		text-align: center
+
+@media (min-width: 769px)
+
+	@for $i from 1 through 12 
+		.col-m-#{$i}
+			width: (100% / 12) * $i
+		
+	@for $i from 1 through 2
+		.col-m-offset#{$i}
+			width: (100% / 12) * $i
+	
+@media (min-width: 769px) and (max-width: 1199px)
+	
+	ul 
+		text-align: center
+	
+	ul 
+		li 
+			text-align: center
+			width: 50%
+	
+	li:nth-child(4) 
+		clear: both
+	
+	.slogan 
+		height: 40%
+		width: 60%
+		margin-top: 200px
+		float: right
+		position: relative
+		text-align: center
+	
+	h1,
+	h2 
+		padding-left: 30px
+		margin: 0 auto
+		display: inline-block
+		
+	h1
+		position: absolute
+		top: 15%
+		font-size: 48px
+
+	h2
+		position: absolute
+		top: 55%
+		font-size: 28px
+	
+@media (max-width: 768px)
+
+	@for $i from 1 through 12 
+		.col-s-#{$i}
+			width: (100% / 12) * $i
+	
+	ul 
+		float: none
+		margin: 0 auto
+		
+	ul 
+		li 
+			text-align: center
+			width: 50%
+
+	li:nth-child(3) 
+		clear: both
+
+	li:nth-child(5) 
+		clear: both
+	
+	.content 
+		height: 100vh
+	
+	.logo 
+		float: none
+		text-align: center
+		display: block
+		margin: 0 auto
+		padding-top: 20px
+	
+	.slogan 
+		height: 30%
+		width: 100vw
+		margin-top: 150px
+		float: right
+		position: relative
+	
+	h1,
+	h2 
+		padding-left: 30px
+		margin: 0 auto
+		display: inline-block
+		
+	h1
+		position: absolute
+		top: 15%
+		font-size: 35px
+
+	h2
+		position: absolute
+		top: 55%
+		font-size: 25px
+	
+	.gallery .col-s-2 
+		position: relative
+		padding: 0
+	
+	.icon 
+		height: 70px
+		width: 70px
+		border-radius: 15px
+
+	.icon .fa 
+		font-size: 35px
+		padding: 20px 0
+		color: $white-color
+		text-align: center
+	
+	.layer i.fa 
+		font-size: 25px
+		margin-top: 80px
+	
+	.layer:active 
+		visibility: visible
+	
+	.description 
+		margin-top: 15px
+		margin-bottom: 15px
+	
+	.title 
+		margin: 0 auto
+		margin-top: 20px
+
+	.picture 
+		padding-bottom: 10px
+
+	.photo 
+		width: 100px
+		height: 100px
+		border-radius: 100px
+		margin-top: 20px
+		margin-bottom: 5px
+	
+	.members 
+		margin-bottom: 10px
+
+	.promo 
+		margin-top: 20px
+		margin: 0 auto
+		padding: 5px
+	
+	.numbers 
+		margin: 55px auto
+
+	.number
+		font-size: 28px
+		font-weight: 700
+	
+	.numb-descrpt
+		text-align: center
+		font-weight: bold
+		margin-top: 10px
+		font-size: 12px
+	
+	.big
+		margin-top: 20px
+		margin-bottom: 10px
+	
+	.end .col-s-12 
+		margin: 0 20px
+	
+	.small
+		font-size: 12px
+	
+	.small [class*="col-"] 
+		padding: 0
+	
+	.line 
+		top: 27px
+	
+	.buttons 
+		margin-top: 10px
+
+	.icons:active 
+		transform: scale(1.1)
+		transition: ease-in-out .3s
+		color: $white-color
